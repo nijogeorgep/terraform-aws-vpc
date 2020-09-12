@@ -1,4 +1,4 @@
-# AWS VPC
+# AWS VPC using Terraform
 
 This repository has the terraform scripts to create an AWS VPC for the following Highly Available VPC Architecture.
 
