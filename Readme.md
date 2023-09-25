@@ -25,6 +25,12 @@ Download Terraform from https://www.terraform.io/downloads.html
 
 Check installed version using ```terraform -v```
 
+## How to Execute your terraform project:
+
+- ```terraform init``` : Initializes the Terraform working directory.
+- ```terraform plan``` : Generates an execution plan, showing what actions Terraform will take.
+- ```terraform apply``` : Applies the changes, creating the VPC bucket.
+
 ## References
 
 https://aws.amazon.com/blogs/architecture/one-to-many-evolving-vpc-design/
