@@ -1,14 +1,6 @@
 provider "aws" {
   region  = "us-west-2"
-  profile = "default"
-}
-
-variable "cidr_block_prefix" {
-  description = "cidr block for the vpc"
-}
-
-variable "subnet_prefix" {
-  description = "cidr block for the subnets"
+  profile = "my-personal-aws"
 }
 
 #Create AWS VPC
@@ -33,13 +25,7 @@ resource "aws_internet_gateway" "igw-deploy-me" {
 
 #AWS Elastic IP
 resource "aws_eip" "eip-deploy-me-for-nat" {
-  vpc                       = true
   depends_on                = [aws_internet_gateway.igw-deploy-me]
-}
-
-#Printig Outputs 
-output "server_public_ip" {
-  value = aws_eip.eip-deploy-me-for-nat.public_ip
 }
 
 #NAT Gateway
